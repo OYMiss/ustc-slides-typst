@@ -138,7 +138,7 @@
         inset: (x: .5em,),
         components.left-and-right(
           text(fill: self.colors.primary, weight: "bold", size: 1.2em, utils.call-or-display(self, self.store.header)),
-          image("ustc_logo_side.svg", height: 61.8%),
+          image("ustc_logo_side.svg", height: 55%),
           // text(fill: self.colors.primary.lighten(65%), utils.call-or-display(self, self.store.header-right)),
         ),
       ),
@@ -209,7 +209,7 @@
   }
   let body = {
     if info.logo != none {
-      place(center, text(fill: self.colors.primary, info.logo))
+      place(right, text(fill: self.colors.primary, info.logo), dx: 5%, dy: -15%)
     }
     align(
       center + horizon,
@@ -225,7 +225,7 @@
             }
           },
         )
-        set text(size: .8em)
+        set text(size: 1em)
         grid(
           columns: (1fr,) * calc.min(info.authors.len(), 3),
           column-gutter: 1em,
@@ -235,11 +235,11 @@
         v(1em)
         if info.institution != none {
           parbreak()
-          text(size: .9em, info.institution)
+          text(size: 1em, info.institution)
         }
         if info.date != none {
           parbreak()
-          text(size: .8em, utils.display-info-date(self))
+          text(size: 0.8em, utils.display-info-date(self))
         }
       },
     )
@@ -275,7 +275,7 @@
       block(
         inset: (x: 1em),
         // text(fill: self.colors.primary, weight: "bold", size: 1.2em, utils.call-or-display(self, info.title)),
-        image("ustc_logo_side.svg", width: 31.8%),
+        // image("ustc_logo_side.svg", width: 31.8%),
         
         // components.left-and-right(
         //   image("ustc_logo_side.svg", height: 61.8%),

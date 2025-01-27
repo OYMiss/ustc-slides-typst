@@ -12,7 +12,7 @@
     neutral-darkest: text-color
   ),
   config-info(
-    logo: image("ustc_logo_side.svg", height: 14%),
+    logo: image("ustc_logo.svg"),
     title: [Modern Type Theory],
     subtitle: [An introduction to modern dependent type theory],
     author: [Chongzhuo Yang],
